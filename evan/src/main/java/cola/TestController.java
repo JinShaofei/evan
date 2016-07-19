@@ -16,6 +16,8 @@ public class TestController {
     }
 
     public static void main(String[] args) {
+
+        System.out.println("xxxxxxxxx");
     }
 
     public static int t(int n) {
