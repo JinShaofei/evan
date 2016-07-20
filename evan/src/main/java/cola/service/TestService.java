@@ -14,12 +14,12 @@ public class TestService {
     private JdbcTemplate jdbcTemplate;
 
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(rollbackFor = Exception.class, propagation = Propagation.REQUIRED)
     public void test() {
 
-        jdbcTemplate.update(" insert into  users(user_name) values ('evan')");
+        jdbcTemplate.execute(" insert into  users(user_name) values ('evan')");
         System.out.println(1 / 0);// 2
-        jdbcTemplate.update(" insert into  users(user_name) values ('evan')");
+        jdbcTemplate.execute(" insert into  users(user_name) values ('evan')");
     }
 
 }

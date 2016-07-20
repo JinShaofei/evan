@@ -52,8 +52,6 @@
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dbcp" />
 	</bean>
-	<!-- dbcp manager -->
-	<tx:annotation-driven transaction-manager="txManager"></tx:annotation-driven>
 	
 
 
