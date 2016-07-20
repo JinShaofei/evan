@@ -19,9 +19,9 @@ public class SupportDAO {
     private JdbcTemplate jdbcTemplate;
 
     public String test() {
-
         List<Map<String, Object>> list = jdbcTemplate.queryForList("select id ,user_name from users");
-
+        jdbcTemplate.update("update users set user_name = 'obama' where id = 1");
+        int i = 100 / 0;
         System.out.println(list);
 
         return null;
