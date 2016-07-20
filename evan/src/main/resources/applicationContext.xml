@@ -13,8 +13,8 @@
 		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd 
 		http://www.springframework.org/schema/tx 
 		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-	<!-- 配置datasource -->
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+	<!-- 配置datasource dbcp -->
+	<bean id="dbcp" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url"
@@ -41,20 +41,20 @@
 		</property>
 	</bean>
 
-	<!-- spring事物的管理器 -->
-	<bean id="txManager"
-		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource" />
-	</bean>
+
 	<!-- jdbcTemplate -->
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-		<property name="dataSource">
-			<ref bean="dataSource" />
-		</property>
+		<property name="dataSource" ref="dbcp" />
 	</bean>
-	<tx:annotation-driven transaction-manager="txManager"
-		proxy-target-class="true" />
 
+	<!-- TransactionManager -->
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dbcp" />
+	</bean>
+	<!-- dbcp manager -->
+	<tx:annotation-driven transaction-manager="txManager"></tx:annotation-driven>
+	
 
 
 </beans>
