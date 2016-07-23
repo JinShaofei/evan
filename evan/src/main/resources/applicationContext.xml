@@ -52,7 +52,11 @@
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dbcp" />
 	</bean>
-	
 
+
+	<!-- 事务控制 -->
+	<tx:annotation-driven transaction-manager="txManager" />
+
+	
 
 </beans>
