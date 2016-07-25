@@ -1,12 +1,12 @@
 package cola.service.user;
 
-import java.sql.SQLException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import cola.dao.UserDao;
+import cola.entity.User;
+import cola.mapper.UserMapper;
 
 /**
  * 
@@ -14,19 +14,23 @@ import cola.dao.UserDao;
  *
  */
 @Service
+@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 public class UsersService {
 
 
     @Autowired
-    private UserDao userDao;
+    private UserMapper userMapper;
 
-    @Transactional
-    public void addUser() throws SQLException {
+    public void addUser() throws Exception {
 
-        for (int i = 0; i < 3; i++) {
-            this.userDao.save();
-            int j = 1 / 0;
-        }
+            for (int i = 0; i < 3; i++) {
+                User u = new User();
+                u.setUserName("obama");
+                u.setUserBalance(100);
+                u.setUserState(1);
+                this.userMapper.save(u);
+                int j = 1 / 0;
+            }
 
     }
 

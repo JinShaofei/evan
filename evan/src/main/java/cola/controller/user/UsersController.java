@@ -1,7 +1,5 @@
 package cola.controller.user;
 
-import java.sql.SQLException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,10 +21,10 @@ public class UsersController {
      * add user
      * 
      * @return
-     * @throws SQLException
+     * @throws Exception
      */
     @RequestMapping("/addUser.htm")
-    public String addUser() throws SQLException {
+    public String addUser() throws Exception {
         
         this.usersService.addUser();
         

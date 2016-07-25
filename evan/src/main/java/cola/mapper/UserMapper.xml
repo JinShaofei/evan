@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cola.mapper.UserMapper">
+
+	<!-- save method -->
+	<insert id="save" parameterType="cola.entity.User">
+		insert into users
+		(user_name,user_balance,user_state)
+		values(#{userName},#{userBalance},#{userState});
+	</insert>
+
+</mapper>
