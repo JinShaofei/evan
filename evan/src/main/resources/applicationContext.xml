@@ -13,12 +13,39 @@
 		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd 
 		http://www.springframework.org/schema/tx 
 		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-	<!-- 配置datasource dbcp -->
-	<bean id="dbcp" class="org.apache.commons.dbcp.BasicDataSource"
+	<!-- 配置datasource dbcp_master -->
+	<bean id="dbcp_master" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://localhost:3306/cola?useUnicode=true&amp;characterEncoding=UTF-8" />
+			value="jdbc:mysql://127.0.0.1:3306/cola?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password" value="123456" />
+		<!--initialSize: 初始化连接 -->
+		<property name="initialSize" value="5" />
+		<!--maxIdle: 最大空闲连接 -->
+		<property name="maxIdle" value="10" />
+		<!--minIdle: 最小空闲连接 -->
+		<property name="minIdle" value="5" />
+		<!--maxActive: 最大连接数量 -->
+		<property name="maxActive" value="15" />
+		<!--removeAbandoned: 是否自动回收超时连接 -->
+		<property name="removeAbandoned" value="true" />
+		<!--removeAbandonedTimeout: 超时时间(以秒数为单位) -->
+		<property name="removeAbandonedTimeout" value="180" />
+		<!--maxWait: 超时等待时间以毫秒为单位 6000毫秒/1000等于60秒 -->
+		<property name="maxWait" value="3000" />
+		<!-- 用来验证从连接池取出的连接,在将连接返回给调用者之前.如果指定,则查询必须是一个SQL SELECT并且必须返回至少一行记录 -->
+		<property name="validationQuery">
+			<value>SELECT 1</value>
+		</property>
+	</bean>
+	<!-- 配置datasource_slave -->
+	<bean id="dbcp_slave" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://127.0.0.1:3306/cola_slave?useUnicode=true&amp;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
 		<property name="password" value="123456" />
 		<!--initialSize: 初始化连接 -->
@@ -41,27 +68,54 @@
 		</property>
 	</bean>
 
+	<!-- 配置动态数据源 -->
+	<bean id="dataSource" class="cola.ds.DynamicDataSource">
+		<property name="targetDataSources">
+			<map key-type="java.lang.String">
+				<!-- write -->
+				<entry key="master" value-ref="dbcp_master" />
+				<!-- read -->
+				<entry key="slave" value-ref="dbcp_slave" />
+			</map>
+		</property>
+		<property name="defaultTargetDataSource" ref="dbcp_master" />
+	</bean>
+
+	<!-- aop配置动态数据源 -->
+	<!-- 配置数据库注解aop -->
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    <bean id="dsAspect" class="cola.ds.aspect.DataSourceAspect" />
+    <aop:config>
+        <aop:aspect id="c" ref="dsAspect">
+            <aop:pointcut id="tx" expression="execution(* cola.mapper.*.*(..))"/>
+            <aop:before pointcut-ref="tx" method="before"/>
+        </aop:aspect>
+    </aop:config>
+    <!-- 配置数据库注解aop -->
+	
+
+
 	<!-- TransactionManager -->
 	<bean id="txManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dbcp" />
+		<property name="dataSource" ref="dataSource" />
 	</bean>
 
 
 	<!-- 事务控制 -->
 	<tx:annotation-driven transaction-manager="txManager" />
-	
-	<!-- mybatis配置sqlsession -->
-	<!-- 创建SqlSessionFactory，同时指定数据源 -->  
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
-        <property name="dataSource" ref="dbcp" />  
-        <property name="configLocation" value="classpath:mybatis-config.xml" />   
-    </bean>  
 
-	<!-- Mapper接口所在包名，Spring会自动查找其下的Mapper -->  
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-        <property name="basePackage" value="cola.mapper" />  
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>  
-    </bean>  
+	<!-- mybatis配置sqlsession -->
+	<!-- 创建SqlSessionFactory，同时指定数据源 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
+	</bean>
+
+	<!-- Mapper接口所在包名，Spring会自动查找其下的Mapper -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="cola.mapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
 
 </beans>

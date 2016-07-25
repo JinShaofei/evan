@@ -29,7 +29,7 @@ public class UsersService {
                 u.setUserBalance(100);
                 u.setUserState(1);
                 this.userMapper.save(u);
-                int j = 1 / 0;
+
             }
 
     }
