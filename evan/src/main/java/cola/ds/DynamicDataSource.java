@@ -10,8 +10,6 @@ import cola.ds.holder.DynamicDataSourceHolder;
  *
  */
 public class DynamicDataSource extends AbstractRoutingDataSource {
-
-
     /**
      * 
      */
@@ -19,5 +17,4 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
     protected Object determineCurrentLookupKey() {
         return DynamicDataSourceHolder.getDataSouce();
     }
-
 }
