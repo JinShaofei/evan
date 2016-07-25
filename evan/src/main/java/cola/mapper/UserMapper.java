@@ -13,7 +13,7 @@ public interface UserMapper {
     /**
      * save user
      */
-    @DataSource("slave")
+    @DataSource("master")
     void save(User u);
 
     /**
