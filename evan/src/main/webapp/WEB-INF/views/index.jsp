@@ -63,11 +63,11 @@
 				<div class="col-md-8">
 					<div class="navmenu"style="text-align: center;">
 						<ul id="menu">
-							<li class="active" ><a href="#home">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#project">Projects</a></li>
-							<li><a href="#news">News</a></li>
-							<li class="last"><a href="#contact">Contact</a></li>
+							<li class="active" ><a href="#home">首页</a></li>
+							<li><a href="#about">关于我们</a></li>
+							<li><a href="#project">产品展示</a></li>
+							<li><a href="#news">公司新闻</a></li>
+							<li class="last"><a href="#contact">法人资质</a></li>
 							<!--li><a href="#features">Features</a></li-->
 						</ul>
 					</div>
@@ -760,11 +760,11 @@
 					</div>
 					<div class="col-md-6 text-right dm">
 						<ul id="downMenu">
-							<li class="active"><a href="#home">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#project1">Projects</a></li>
-							<li><a href="#news">News</a></li>
-							<li class="last"><a href="#contact">Contact</a></li>
+							<li class="active" ><a href="#home">首页</a></li>
+							<li><a href="#about">关于我们</a></li>
+							<li><a href="#project">产品展示</a></li>
+							<li><a href="#news">公司新闻</a></li>
+							<li class="last"><a href="#contact">法人资质</a></li>
 							<!--li><a href="#features">Features</a></li-->
 						</ul>
 					</div>
