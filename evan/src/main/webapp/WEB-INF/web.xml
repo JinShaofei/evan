@@ -27,6 +27,9 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
+	<!-- 配置welcome文件 -->
+	<welcome-file-list>
+		<welcome-file></welcome-file>
+	</welcome-file-list>
 
-	
 </web-app>
