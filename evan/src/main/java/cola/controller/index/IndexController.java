@@ -19,10 +19,21 @@ public class IndexController {
      */
     @RequestMapping("/index.htm")
     public String index() {
-        return "index";
+        return "index/index";
     }
     
     
     
+    /**
+     * to about
+     * 
+     * @return
+     */
+    @RequestMapping("/about.htm")
+    public String about() {
+
+        return "about/about";
+
+    }
     
 }

@@ -12,23 +12,48 @@ import cola.service.user.UsersService;
  *
  */
 @Controller
+@RequestMapping("/user")
 public class UsersController {
 
     @Autowired
     private UsersService usersService;
 
+    // /**
+    // * add user
+    // *
+    // * @return
+    // * @throws Exception
+    // */
+    // @RequestMapping("/addUser.htm")
+    // public String addUser() throws Exception {
+    //
+    // this.usersService.addUser();
+    //
+    // return "users/addUser";
+    // }
+
     /**
-     * add user
+     * to login
      * 
      * @return
-     * @throws Exception
      */
-    @RequestMapping("/addUser.htm")
-    public String addUser() throws Exception {
+    @RequestMapping("/toLogin.htm")
+    public String toLogin() {
         
-        this.usersService.addUser();
-        
-        return "users/addUser";
+        return "user/login";
+
+    }
+
+    /**
+     * to register
+     * 
+     * @return
+     */
+    @RequestMapping("/toRegister.htm")
+    public String toRegister() {
+
+        return "user/register";
+
     }
 
 }
