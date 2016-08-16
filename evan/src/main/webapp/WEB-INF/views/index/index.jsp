@@ -59,7 +59,7 @@ $(function() {
 		<div id="sticky_navigation">
 			<div class="demo_container navigation-bar">
 				<div class="navigation">
-					<div class="logo"><a href="index.html">SH</a></div>
+					<div class="logo"><a href="index.htm"></a></div>
 					<span class="menu"></span>
 					<script>
 						$( "span.menu" ).click(function() {
@@ -70,9 +70,9 @@ $(function() {
 					</script>
 					<div class="navig">
 						<ul>
-							<li><a href="women.html">小狗</a></li>
-							<li><a href="men.html">小猫</a></li>
-							<li><a href="#">其他</a></li>
+							<li><a href="toDog.htm">小狗</a></li>
+							<li><a href="toCat.htm">小猫</a></li>
+							<li><a href="toOthers.htm">其他</a></li>
 							<!-- <li><a href="#"></a></li> -->
 							<li><a href="about.htm">关于我们</a></li>
 						</ul>
@@ -82,7 +82,7 @@ $(function() {
 				<div class="navigation-right">
 					<ul class="user">
 						<li>
-							<span></span><a href="user/toLogin.htm">登录</a>
+							<span></span><a href="toLogin.htm">登录</a>
 						</li>
 						<li>
 							<span class="bascket"></span><a href="bascket.html">购物车(0)</a>
@@ -285,7 +285,7 @@ $(function() {
 				</div>
 				<div class="col-md-3 foot-cl">
 					<h3 class="ft-title">social</h3>
-					<p>Shoper is made with love in Warsaw,<br>2014 &copy; More Templates <a href="http://www.mycodes.net/" target="_blank">&#28304;&#30721;&#20043;&#23478;</a></p>
+					<p>Shoper is made with love in Warsaw<br>2016</p>
 					<ul class="social">
 						<li><i class="fa"></i></li>
 						<li><i class="tw"></i></li>

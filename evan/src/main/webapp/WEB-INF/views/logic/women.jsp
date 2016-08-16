@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Shade Bootstarp Website Template | Women :: w3layouts</title>
+<title>欢迎来到萌宠之家</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
@@ -316,7 +316,7 @@ $(function() {
 				</div>
 				<div class="col-md-3 foot-cl">
 					<h3 class="ft-title">social</h3>
-					<p>Shoper is made with love in Warsaw,<br>2014 &copy; More Templates  <a href="http://www.mycodes.net/" target="_blank">&#28304;&#30721;&#20043;&#23478;</a></p>
+					<p>Shoper is made with love in Warsaw,<br>2016 &copy; More Templates  <a href="http://www.mycodes.net/" target="_blank">&#28304;&#30721;&#20043;&#23478;</a></p>
 					<ul class="social">
 						<li><i class="fa"></i></li>
 						<li><i class="tw"></i></li>

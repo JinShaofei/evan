@@ -12,7 +12,6 @@ import cola.service.user.UsersService;
  *
  */
 @Controller
-@RequestMapping("/user")
 public class UsersController {
 
     @Autowired
@@ -37,7 +36,7 @@ public class UsersController {
      * 
      * @return
      */
-    @RequestMapping("/toLogin.htm")
+    @RequestMapping("toLogin.htm")
     public String toLogin() {
         
         return "user/login";
@@ -49,7 +48,7 @@ public class UsersController {
      * 
      * @return
      */
-    @RequestMapping("/toRegister.htm")
+    @RequestMapping("toRegister.htm")
     public String toRegister() {
 
         return "user/register";

@@ -268,7 +268,7 @@ $(function() {
 							</div>
 							<div class="col-md-3 foot-cl">
 								<h3 class="ft-title">social</h3>
-								<p>Shoper is made with love in Warsaw,<br>2014 &copy; More Templates  <a href="http://www.mycodes.net/" target="_blank">&#28304;&#30721;&#20043;&#23478;</a></p>
+								<p>Shoper is made with love in Warsaw</p>
 								<ul class="social">
 									<li><i class="fa"></i></li>
 									<li><i class="tw"></i></li>

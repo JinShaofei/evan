@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Shade Bootstarp Website Template | Login :: w3layouts</title>
+<title>欢迎来到萌宠之家</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
@@ -70,11 +70,11 @@ $(function() {
 					</script>
 					<div class="navig">
 						<ul>
-							<li><a href="women.html">Woman</a></li>
-							<li><a href="men.html">Men</a></li>
-							<li><a href="#">Kids</a></li>
-							<li><a href="#">Comming Soon</a></li>
-							<li><a href="about.html">About</a></li>
+							<li><a href="women.html">小狗</a></li>
+							<li><a href="men.html">小猫</a></li>
+							<li><a href="#">其他</a></li>
+							<!-- <li><a href="#"></a></li> -->
+							<li><a href="about.htm">关于我们</a></li>
 						</ul>
 					</div>
 					<div class="clearfix"></div>
@@ -82,7 +82,7 @@ $(function() {
 				<div class="navigation-right">
 					<ul class="user">
 						<li>
-							<span></span><a href="login.html">Log In</a>
+							<span></span><a href="toLogin.htm">登录</a>
 						</li>
 						<li>
 							<span class="bascket"></span><a href="bascket.html">Basket(0)</a>
@@ -117,8 +117,8 @@ $(function() {
 	<div class="content">
 		<div class="pag-nav">
 			<ul class="p-list">
-				<li><a href="index.html">Home</a></li> &nbsp;&nbsp;/&nbsp;
-				<li class="act">&nbsp;Login</li>
+				<li><a href="index.htm">首页</a></li> &nbsp;&nbsp;/&nbsp;
+				<li class="act">&nbsp;登录</li>
 			</ul>
 		</div>
 		<div class="coats">
@@ -149,7 +149,7 @@ $(function() {
 			<h3 class="c-head">For New People</h3>
 			<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorp uspendisse a pellentesque.</p>
 			<div class="reg">
-				<a href="register.html">
+				<a href="toRegister.htm">
 					Register Here
 				</a>
 			</div>
