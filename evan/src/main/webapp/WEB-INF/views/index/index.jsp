@@ -116,7 +116,7 @@ $(function() {
 <div class="container">
 <section id="main">
 	<div class="content">
-		<!-- Banner Starts Here --->
+		<!-- Banner Starts Here 放一张比较温馨的宠物和人一起玩的照片 --->
 		<div class="banner">
 			<h1>Hazy Shade of spring</h1>
 			<small>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo.</small>
