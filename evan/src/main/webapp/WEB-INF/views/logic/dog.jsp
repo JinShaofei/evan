@@ -59,7 +59,7 @@ $(function() {
 		<div id="sticky_navigation">
 			<div class="demo_container navigation-bar">
 				<div class="navigation">
-					<div class="logo"><a href="index.html">SH</a></div>
+					<div class="logo"><a href="index.htm">COLA</a></div>
 					<span class="menu"></span>
 					<script>
 						$( "span.menu" ).click(function() {
@@ -70,11 +70,11 @@ $(function() {
 					</script>
 					<div class="navig">
 						<ul>
-							<li><a href="women.html">Woman</a></li>
-							<li><a href="men.html">Men</a></li>
-							<li><a href="#">Kids</a></li>
-							<li><a href="#">Comming Soon</a></li>
-							<li><a href="about.html">About</a></li>
+							<li><a href="toDog.htm">小狗</a></li>
+							<li><a href="toCat.htm">小猫</a></li>
+							<li><a href="toOthers.htm">其他</a></li>
+							<!-- <li><a href="#"></a></li> -->
+							<li><a href="about.htm">关于我们</a></li>
 						</ul>
 					</div>
 					<div class="clearfix"></div>
@@ -82,10 +82,10 @@ $(function() {
 				<div class="navigation-right">
 					<ul class="user">
 						<li>
-							<span></span><a href="login.html">Log In</a>
+							<span></span><a href="toLogin.htm">登录</a>
 						</li>
 						<li>
-							<span class="bascket"></span><a href="bascket.html">Basket(0)</a>
+							<span class="bascket"></span><a href="bascket.html">购物车(0)</a>
 						</li>
 						<li>
 							<button class="search"></button>
@@ -117,17 +117,17 @@ $(function() {
 	<div class="content">
 		<div class="pag-nav">
 			<ul class="p-list">
-				<li><a href="index.html">Home</a></li> &nbsp;&nbsp;/&nbsp;
-				<li class="act">&nbsp;Women</li>
+				<li><a href="index.htm">首页</a></li> &nbsp;&nbsp;/&nbsp;
+				<li class="act">&nbsp;小狗</li>
 			</ul>
 		</div>
 		<div class="coats">
-			<h3 class="c-head">Coats</h3>
-			<small><a href="#">Show More</a></small>
+			<h3 class="c-head">Dogs</h3>
+			<small><a href="#">查看更多</a></small>
 			<div class="coat-row">
 				<div class="coat-column">
 					<a href="single.html">
-						<img src="images/p8.jpg" class="img-responsive" alt="">
+						<img src="images/men1.jpg" class="img-responsive" alt="">
 						<div class="prod-desc"><h4>Double-Layered Top</h4><small>&euro; 89,95</small></div>
 					</a>
 					<div class="mask">
@@ -135,7 +135,7 @@ $(function() {
 				      </div>
 				</div>
 				<div class="coat-column">
-					<a href="single.html"><img src="images/p9.jpg" class="img-responsive" alt="">
+					<a href="single.html"><img src="images/men2.jpg" class="img-responsive" alt="">
 						<div class="prod-desc"><h4>Double-Layered Top</h4><small>&euro; 89,95</small></div>
 					</a>
 					<div class="mask">
@@ -143,7 +143,7 @@ $(function() {
 				      </div>
 				</div>
 				<div class="coat-column">
-					<a href="single.html"><img src="images/p10.jpg" class="img-responsive" alt="">
+					<a href="single.html"><img src="images/men3.jpg" class="img-responsive" alt="">
 						<div class="prod-desc"><h4>Double-Layered Top</h4><small>&euro; 89,95</small></div>
 					</a>
 					<div class="mask">
@@ -151,7 +151,7 @@ $(function() {
 				      </div>
 				</div>
 				<div class="coat-column1">
-					<a href="single.html"><img src="images/p11.jpg" class="img-responsive" alt="">
+					<a href="single.html"><img src="images/men4.jpg" class="img-responsive" alt="">
 						<div class="prod-desc"><h4>Double-Layered Top</h4><small>&euro; 89,95</small></div>
 					</a>
 					<div class="mask">
@@ -167,7 +167,7 @@ $(function() {
 			<div class="coat-row">
 				<div class="coat-column">
 					<a href="single.html">
-						<img src="images/p12.jpg" class="img-responsive" alt="">
+						<img src="images/men5.png" class="img-responsive" alt="">
 						<div class="prod-desc"><h4>Double-Layered Top</h4><small>&euro; 89,95</small></div>
 					</a>
 					<div class="mask">
@@ -175,7 +175,7 @@ $(function() {
 				      </div>
 				</div>
 				<div class="coat-column">
-					<a href="single.html"><img src="images/p13.jpg" class="img-responsive" alt="">
+					<a href="single.html"><img src="images/men6.png" class="img-responsive" alt="">
 						<div class="prod-desc"><h4>Double-Layered Top</h4><small>&euro; 89,95</small></div>
 					</a>
 					<div class="mask">
@@ -183,7 +183,7 @@ $(function() {
 				      </div>
 				</div>
 				<div class="coat-column">
-					<a href="single.html"><img src="images/p14.jpg" class="img-responsive" alt="">
+					<a href="single.html"><img src="images/men5.png" class="img-responsive" alt="">
 						<div class="prod-desc"><h4>Double-Layered Top</h4><small>&euro; 89,95</small></div>
 					</a>
 					<div class="mask">
@@ -191,7 +191,7 @@ $(function() {
 				      </div>
 				</div>
 				<div class="coat-column1">
-					<a href="single.html"><img src="images/p15.jpg" class="img-responsive" alt="">
+					<a href="single.html"><img src="images/men6.png" class="img-responsive" alt="">
 						<div class="prod-desc"><h4>Double-Layered Top</h4><small>&euro; 89,95</small></div>
 					</a>
 					<div class="mask">
@@ -203,7 +203,7 @@ $(function() {
 		</div>
 		<div class="coats">
 			<h3 class="c-head">T-shirts</h3>
-			<small><a href="#">Show More</a></small>
+			<small><a href="single.html">Show More</a></small>
 			<div class="coat-row">
 				<div class="coat-column">
 					<a href="single.html">
@@ -287,40 +287,36 @@ $(function() {
 		<div class="footer">
 			<div class="row footer-row">
 				<div class="col-md-3 footer-col">
-					<h3 class="ft-title">Collection</h3>
+					<h3 class="ft-title">宠物部落</h3>
 					<ul class="ft-list">
-						<li><a href="#">Woman (1725)</a></li>
-						<li><a href="#">Men (635)</a></li>
-						<li><a href="#">Kids (2514</a></li>
-						<li><a href="#">Comming Soon (76)</a></li>
+						<li><a href="#">小狗</a></li>
+						<li><a href="#">小猫</a></li>
+						<li><a href="#">其他</a></li>
+						<li><a href="#">敬请期待</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 footer-col">
-					<h3 class="ft-title">site</h3>
+					<h3 class="ft-title">帮助中心</h3>
 					<ul class="ft-list  list-h">
-						<li><a href="#">Terms of Service </a></li>
-						<li><a href="#">Privacy Policy </a></li>
-						<li><a href="#">Copyright Policy </a></li>
-						<li><a href="#">Press Kit</a></li>
-						<li><a href="#">Support</a></li>
+						<li><a href="#">账户管理</a></li>
+						<li><a href="#">注册指南 </a></li>
+						<li><a href="#">宠物乐园</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 footer-col">
-					<h3 class="ft-title">Shop</h3>
+					<h3 class="ft-title">关于我们</h3>
 					<ul class="ft-list list-h">
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Shipping Metods</a></li>
-						<li><a href="#">Career</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="#">了解我们</a></li>
+						<li><a href="#">加入我们</a></li>
+						<li><a href="#">联系我们</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 foot-cl">
-					<h3 class="ft-title">social</h3>
-					<p>Shoper is made with love in Warsaw,<br>2016 &copy; More Templates  <a href="http://www.mycodes.net/" target="_blank">&#28304;&#30721;&#20043;&#23478;</a></p>
-					<ul class="social">
-						<li><i class="fa"></i></li>
-						<li><i class="tw"></i></li>
-						<li><i class="is"></i></li>
+					<h3 class="ft-title">关注我们</h3>
+					<ul class="ft-list list-h">
+						<li><a href="#">新浪微博</a></li>
+						<li><a href="#">宠物部落</a></li>
+						<li><a href="#">官方微信</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>

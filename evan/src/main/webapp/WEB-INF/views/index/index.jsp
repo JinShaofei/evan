@@ -59,7 +59,7 @@ $(function() {
 		<div id="sticky_navigation">
 			<div class="demo_container navigation-bar">
 				<div class="navigation">
-					<div class="logo"><a href="index.htm"></a></div>
+					<div class="logo"><a href="index.htm">COLA</a></div>
 					<span class="menu"></span>
 					<script>
 						$( "span.menu" ).click(function() {
@@ -256,40 +256,36 @@ $(function() {
 		<div class="footer">
 			<div class="row footer-row">
 				<div class="col-md-3 footer-col">
-					<h3 class="ft-title">Collection</h3>
+					<h3 class="ft-title">宠物部落</h3>
 					<ul class="ft-list">
-						<li><a href="#">Woman (1725)</a></li>
-						<li><a href="#">Men (635)</a></li>
-						<li><a href="#">Kids (2514</a></li>
-						<li><a href="#">Comming Soon (76)</a></li>
+						<li><a href="#">小狗</a></li>
+						<li><a href="#">小猫</a></li>
+						<li><a href="#">其他</a></li>
+						<li><a href="#">敬请期待</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 footer-col">
-					<h3 class="ft-title">site</h3>
+					<h3 class="ft-title">帮助中心</h3>
 					<ul class="ft-list  list-h">
-						<li><a href="#">Terms of Service </a></li>
-						<li><a href="#">Privacy Policy </a></li>
-						<li><a href="#">Copyright Policy </a></li>
-						<li><a href="#">Press Kit</a></li>
-						<li><a href="#">Support</a></li>
+						<li><a href="#">账户管理</a></li>
+						<li><a href="#">注册指南 </a></li>
+						<li><a href="#">宠物乐园</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 footer-col">
-					<h3 class="ft-title">Shop</h3>
+					<h3 class="ft-title">关于我们</h3>
 					<ul class="ft-list list-h">
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Shipping Metods</a></li>
-						<li><a href="#">Career</a></li>
-						<li><a href="contact.jsp">Contact</a></li>
+						<li><a href="#">了解我们</a></li>
+						<li><a href="#">加入我们</a></li>
+						<li><a href="#">联系我们</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 foot-cl">
-					<h3 class="ft-title">social</h3>
-					<p>Shoper is made with love in Warsaw<br>2016</p>
-					<ul class="social">
-						<li><i class="fa"></i></li>
-						<li><i class="tw"></i></li>
-						<li><i class="is"></i></li>
+					<h3 class="ft-title">关注我们</h3>
+					<ul class="ft-list list-h">
+						<li><a href="#">新浪微博</a></li>
+						<li><a href="#">宠物部落</a></li>
+						<li><a href="#">官方微信</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"></div>
