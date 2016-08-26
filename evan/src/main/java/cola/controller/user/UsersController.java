@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import cola.entity.User;
 import cola.service.user.UsersService;
 
 /**
@@ -53,6 +54,18 @@ public class UsersController {
 
         return "user/register";
 
+    }
+
+    /**
+     * 注册
+     * 
+     * @return
+     */
+    @RequestMapping("register")
+    public String register() {
+        User u = new User();
+        this.usersService.saveUser(u);
+        return null;
     }
 
 }

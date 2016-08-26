@@ -85,7 +85,7 @@ $(function() {
 							<span></span><a href="toLogin.htm">登录</a>
 						</li>
 						<li>
-							<span class="bascket"></span><a href="bascket.html">购物车(0)</a>
+							<span class="bascket"></span><a href="toRegister.htm">注册</a>
 						</li>
 						<li>
 							<button class="search"></button>

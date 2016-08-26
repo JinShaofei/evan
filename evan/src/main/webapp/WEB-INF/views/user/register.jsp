@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Shade Bootstarp Website Template | Register :: w3layouts</title>
+<title>欢迎来到萌宠之家</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-1.11.0.min.js"></script>
@@ -59,7 +59,7 @@ $(function() {
 		<div id="sticky_navigation">
 			<div class="demo_container navigation-bar">
 				<div class="navigation">
-					<div class="logo"><a href="index.html">SH</a></div>
+					<div class="logo"><a href="index.htm">COLA</a></div>
 					<span class="menu"></span>
 					<script>
 						$( "span.menu" ).click(function() {
@@ -70,11 +70,11 @@ $(function() {
 					</script>
 					<div class="navig">
 						<ul>
-							<li><a href="women.html">Woman</a></li>
-							<li><a href="men.html">Men</a></li>
-							<li><a href="#">Kids</a></li>
-							<li><a href="#">Comming Soon</a></li>
-							<li><a href="about.html">About</a></li>
+							<li><a href="toDog.htm">小狗</a></li>
+							<li><a href="toCat.htm">小猫</a></li>
+							<li><a href="toOthers.htm">其他</a></li>
+							<!-- <li><a href="#"></a></li> -->
+							<li><a href="about.htm">关于我们</a></li>
 						</ul>
 					</div>
 					<div class="clearfix"></div>
@@ -82,10 +82,10 @@ $(function() {
 				<div class="navigation-right">
 					<ul class="user">
 						<li>
-							<span></span><a href="login.html">Log In</a>
+							<span></span><a href="toLogin.htm">登陆</a>
 						</li>
 						<li>
-							<span class="bascket"></span><a href="bascket.html">Basket(0)</a>
+							<span class="bascket"></span><a href="#">注册</a>
 						</li>
 						<li>
 							<button class="search"></button>
@@ -117,44 +117,39 @@ $(function() {
 	<div class="content">
 		<div class="pag-nav">
 			<ul class="p-list">
-				<li><a href="index.html">Home</a></li> &nbsp;&nbsp;/&nbsp;
-				<li class="act">&nbsp;Register</li>
+				<li><a href="index.htm">首页</a></li> &nbsp;&nbsp;/&nbsp;
+				<li class="act">&nbsp;注册</li>
 			</ul>
 		</div>
 		<div class="coats">
-			<h3 class="c-head">Register Here</h3>
+			<h3 class="c-head">欢迎注册</h3>
 			<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorp uspendisse a pellentesque.</p>
 		</div>
 		<div class="register">
-	  	  <form> 
+	  	  <form action="#"> 
 			 <div class="register-top-grid">
 				<h3>PERSONAL INFORMATION</h3>
 				 <div>
-					<span>First Name<label>*</label></span>
-					<input type="text"> 
+					<span>宠物昵称<label>*</label></span>
+					<input type="text" name="pet_name"> 
 				 </div>
 				 <div>
-					<span>Last Name<label>*</label></span>
-					<input type="text"> 
-				 </div>
-				 <div>
-					 <span>Email Address<label>*</label></span>
-					 <input type="text"> 
+					<span>手机号<label>*</label></span>
+					<input type="text" name="mobile"> 
 				 </div>
 				 <div class="clearfix"> </div>
 				   <a class="news-letter" href="#">
-					 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
 				   </a>
 				 </div>
 			     <div class="register-bottom-grid">
 					    <h3>LOGIN INFORMATION</h3>
 						 <div>
-							<span>Password<label>*</label></span>
-							<input type="password">
+							<span>密码<label>*</label></span>
+							<input type="password" name="password_1">
 						 </div>
 						 <div>
-							<span>Confirm Password<label>*</label></span>
-							<input type="password">
+							<span>确认密码<label>*</label></span>
+							<input type="password" name="password_2">
 						 </div>
 				 </div>
 			</form>
