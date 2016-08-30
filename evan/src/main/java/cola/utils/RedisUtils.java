@@ -25,7 +25,6 @@ public class RedisUtils {
     static {
                pool = ApplicationContextHolder.getBeanByClazz(JedisPool.class);
     }
-    // private static Jedis proxy=create();
 
     private static JedisPool pool;
 
