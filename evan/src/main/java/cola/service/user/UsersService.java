@@ -17,6 +17,7 @@ import cola.mapper.UserMapper;
 @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 public class UsersService {
 
+    // usermapper
     @Autowired
     private UserMapper userMapper;
 

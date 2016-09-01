@@ -48,6 +48,16 @@ $(function() {
 	});
 	
 });
+
+//register
+/* $("#regbutton").click(function() {
+	 // $( "#regForm" ).submit();
+	 alert('hello');
+}); */
+function reg(){
+	$( "#regForm" ).submit();
+}
+
 </script>
 </head>
 <body>
@@ -126,16 +136,16 @@ $(function() {
 			<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorp uspendisse a pellentesque.</p>
 		</div>
 		<div class="register">
-	  	  <form action="#"> 
+	  	  <form action="register.htm" method="post" id ="regForm"> 
 			 <div class="register-top-grid">
 				<h3>PERSONAL INFORMATION</h3>
 				 <div>
 					<span>宠物昵称<label>*</label></span>
-					<input type="text" name="pet_name"> 
+					<input type="text" name="userName"> 
 				 </div>
 				 <div>
 					<span>手机号<label>*</label></span>
-					<input type="text" name="mobile"> 
+					<input type="text" name="userMobile"> 
 				 </div>
 				 <div class="clearfix"> </div>
 				   <a class="news-letter" href="#">
@@ -145,18 +155,18 @@ $(function() {
 					    <h3>LOGIN INFORMATION</h3>
 						 <div>
 							<span>密码<label>*</label></span>
-							<input type="password" name="password_1">
+							<input type="password" name="userPass1">
 						 </div>
 						 <div>
 							<span>确认密码<label>*</label></span>
-							<input type="password" name="password_2">
+							<input type="password" name="userPass2">
 						 </div>
 				 </div>
 			</form>
 			<div class="clearfix"> </div>
 			<div class="register-but">
 			   <form>
-				   <input type="submit" value="submit">
+				   <input type="submit" value="注册" id="regbutton" onclick="reg()">
 				   <div class="clearfix"> </div>
 			   </form>
 			</div>
@@ -199,6 +209,8 @@ $(function() {
 					    });
 					    
 					});
+
+					
 			 </script>
 	         <script type="text/javascript" src="js/jquery.flexisel.js"></script>
 		</div>

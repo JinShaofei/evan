@@ -14,9 +14,11 @@ public class User {
 
     private String userName;
 
-    private Integer userBalance;
-
     private Integer userState;
+
+    private String userMobile;
+
+    private String userPass;
 
     public Integer getId() {
         return id;
@@ -34,12 +36,20 @@ public class User {
         this.userName = userName;
     }
 
-    public Integer getUserBalance() {
-        return userBalance;
+    public String getUserMobile() {
+        return userMobile;
     }
 
-    public void setUserBalance(Integer userBalance) {
-        this.userBalance = userBalance;
+    public void setUserMobile(String userMobile) {
+        this.userMobile = userMobile;
+    }
+
+    public String getUserPass() {
+        return userPass;
+    }
+
+    public void setUserPass(String userPass) {
+        this.userPass = userPass;
     }
 
     public Integer getUserState() {

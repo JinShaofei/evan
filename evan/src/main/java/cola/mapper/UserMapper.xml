@@ -7,8 +7,8 @@
 	<!-- save method -->
 	<insert id="save" parameterType="cola.entity.User">
 		insert into users
-		(user_name,user_balance,user_state)
-		values(#{userName},#{userBalance},#{userState});
+		(user_name,user_state,user_mobile,user_pass)
+		values(#{userName},#{userState},#{userMobile},#{userPass});
 	</insert>
 
 </mapper>

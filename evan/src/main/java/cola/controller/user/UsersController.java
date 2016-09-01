@@ -2,6 +2,7 @@ package cola.controller.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import cola.entity.User;
@@ -61,11 +62,15 @@ public class UsersController {
      * 
      * @return
      */
-    @RequestMapping("register")
-    public String register() {
-        User u = new User();
-        this.usersService.saveUser(u);
-        return null;
+    @RequestMapping("register.htm")
+    public String register(@RequestBody(required = true) User user) {
+        try {
+            this.usersService.saveUser(user);
+            return "/index";
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "/failReg";
     }
 
 }
