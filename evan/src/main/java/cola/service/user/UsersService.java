@@ -25,4 +25,8 @@ public class UsersService {
         this.userMapper.save(u);
     }
 
+    public User getUserByNamePass(String userName, String passWord) {
+        return userMapper.getUserByNamePass(userName, passWord);
+    }
+
 }

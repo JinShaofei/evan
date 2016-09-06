@@ -2,11 +2,12 @@ package cola.controller.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import cola.entity.User;
 import cola.service.user.UsersService;
+import cola.utils.user.UserConstants;
 
 /**
  * 
@@ -19,20 +20,6 @@ public class UsersController {
     @Autowired
     private UsersService usersService;
 
-    // /**
-    // * add user
-    // *
-    // * @return
-    // * @throws Exception
-    // */
-    // @RequestMapping("/addUser.htm")
-    // public String addUser() throws Exception {
-    //
-    // this.usersService.addUser();
-    //
-    // return "users/addUser";
-    // }
-
     /**
      * to login
      * 
@@ -40,7 +27,7 @@ public class UsersController {
      */
     @RequestMapping("toLogin.htm")
     public String toLogin() {
-        
+
         return "user/login";
 
     }
@@ -63,14 +50,35 @@ public class UsersController {
      * @return
      */
     @RequestMapping("register.htm")
-    public String register(@RequestBody(required = true) User user) {
+    public String register(@RequestParam(required = true) String userName,
+            @RequestParam(required = true) String userMobile, @RequestParam(required = true) String userPass1,
+            @RequestParam(required = true) String userPass2) {
         try {
-            this.usersService.saveUser(user);
-            return "/index";
+            if(userPass1.equals(userPass2)){
+                User u = new User(userName, UserConstants.USER_STATE, userMobile, userPass1);
+                this.usersService.saveUser(u);
+            }
+            return "user/login";
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "/failReg";
+    }
+
+    /**
+     * 登录
+     * 
+     * @return
+     */
+    @RequestMapping("login.htm")
+    public String login(@RequestParam(required = true) String userName,
+            @RequestParam(required = true) String passWord) {
+        User u = this.usersService.getUserByNamePass(userName, passWord);
+        if (u != null) {
+            return "redirect:index.htm";
+        }
+        return null;
+
     }
 
 }

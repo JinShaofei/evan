@@ -1,5 +1,7 @@
 package cola.mapper;
 
+import org.apache.ibatis.annotations.Param;
+
 import cola.annotation.DataSource;
 import cola.entity.User;
 
@@ -21,5 +23,8 @@ public interface UserMapper {
      */
     @DataSource("slave")
     void list();
+
+    @DataSource("master")
+    User getUserByNamePass(@Param("userName") String userName, @Param("passWord") String passWord);
 
 }

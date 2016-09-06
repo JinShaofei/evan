@@ -20,6 +20,18 @@ public class User {
 
     private String userPass;
 
+    public User() {
+        super();
+    }
+
+    public User(String userName, Integer userState, String userMobile, String userPass) {
+        super();
+        this.userName = userName;
+        this.userState = userState;
+        this.userMobile = userMobile;
+        this.userPass = userPass;
+    }
+
     public Integer getId() {
         return id;
     }
