@@ -25,6 +25,6 @@ public interface UserMapper {
     void list();
 
     @DataSource("master")
-    User getUserByNamePass(@Param("userName") String userName, @Param("passWord") String passWord);
+    User getUserByMobilePass(@Param("userMobile") String userMobile, @Param("passWord") String passWord);
 
 }

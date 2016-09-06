@@ -17,7 +17,9 @@
 	
 	
 	
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
 
 
 
@@ -86,7 +88,7 @@
 						<div class="demo_container navigation-bar">
 							<div class="navigation">
 								<div class="logo">
-									<a href="index.html">SH</a>
+									<a href="index.htm">COLA</a>
 								</div>
 								<span class="menu"></span>
 								<script>
@@ -100,9 +102,9 @@
 								</script>
 								<div class="navig">
 									<ul>
-										<li><a href="women.html">小狗</a></li>
-										<li><a href="men.html">小猫</a></li>
-										<li><a href="#">其他</a></li>
+										<li><a href="toDog.htm">小狗</a></li>
+										<li><a href="toCat.htm">小猫</a></li>
+										<li><a href="toOthers.htm">其他</a></li>
 										<!-- <li><a href="#"></a></li> -->
 										<li><a href="about.htm">关于我们</a></li>
 									</ul>
@@ -155,9 +157,9 @@
 			<form action="login.htm" method="post">
 				<div class="contact-box login-box">
 					<div class="form">
-						<small>用户名</small>
+						<small>手机号</small>
 						<div class="text">
-							<input type="text" name="userName" />
+							<input type="text" name="userMobile" />
 						</div>
 					</div>
 					<div class="form">
@@ -167,7 +169,7 @@
 						</div>
 					</div>
 					<div class="text">
-						<input type="submit" value="登陆" onclick="login()" />
+						<input type="submit" value="登陆" />
 					</div>
 					<div class="text">
 						<a href="#">忘记密码？</a>

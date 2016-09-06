@@ -13,7 +13,7 @@
 	</resultMap>
 
 	<sql id="Base_Column_List">
-		id, userName, userState, userMobile, userPass
+		id,user_name,user_state,user_mobile,user_pass
 	</sql>
 
 
@@ -24,11 +24,11 @@
 		values(#{userName},#{userState},#{userMobile},#{userPass});
 	</insert>
 	
-	<select id="getUserByNamePass" resultMap="BaseResultMap" parameterType="java.lang.String" >
+	<select id="getUserByMobilePass" resultMap="BaseResultMap" parameterType="java.lang.String" >
         select
         <include refid="Base_Column_List" />
         from users
-        where  user_name= #{userName} and user_pass = #{passWord}
+        where  user_mobile= #{userMobile} and user_pass = #{passWord}
     </select>
 
 </mapper>

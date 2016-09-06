@@ -1,5 +1,7 @@
 package cola.controller.user;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -71,13 +73,30 @@ public class UsersController {
      * @return
      */
     @RequestMapping("login.htm")
-    public String login(@RequestParam(required = true) String userName,
-            @RequestParam(required = true) String passWord) {
-        User u = this.usersService.getUserByNamePass(userName, passWord);
+    public String login(@RequestParam(required = true) String userMobile,
+            @RequestParam(required = true) String passWord, HttpServletRequest req) {
+        User u = this.usersService.getUserByMobilePass(userMobile, passWord);
         if (u != null) {
+            // login success
+            req.getSession().setAttribute("currentUser", u);
             return "redirect:index.htm";
         }
         return null;
+
+    }
+
+    /**
+     * 退出
+     * 
+     * @return
+     */
+    @RequestMapping("toLoginOut.htm")
+    public String toLoginOut(HttpServletRequest req) {
+        User u = (User) req.getSession().getAttribute("currentUser");
+        if (u != null) {
+            req.getSession().removeAttribute("currentUser");
+        }
+        return "user/login";
 
     }
 

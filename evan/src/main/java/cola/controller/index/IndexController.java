@@ -1,7 +1,12 @@
 package cola.controller.index;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import cola.entity.User;
 
 /**
  * index controller
@@ -18,8 +23,13 @@ public class IndexController {
      * @return
      */
     @RequestMapping("/index.htm")
-    public String index() {
-        return "index/index";
+    public ModelAndView index(HttpServletRequest req) {
+        ModelAndView mv = new ModelAndView("index/index");
+        User u = (User) req.getSession().getAttribute("currentUser");
+        if (u != null) {
+            mv.addObject("u", u);
+        }
+        return mv;
     }
     
     
