@@ -1,4 +1,4 @@
-package cola.utils;
+package cola.utils.security;
 
 import java.security.MessageDigest;
 
@@ -27,7 +27,6 @@ public class MD5Util {
                 if (val < 16)
                     sb.append("0");
                 sb.append(Integer.toHexString(val));
-
             }
             return sb.toString();
         } catch (Exception e) {

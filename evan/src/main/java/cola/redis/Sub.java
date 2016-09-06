@@ -1,6 +1,6 @@
 package cola.redis;
 
-import cola.utils.RedisUtils;
+import cola.utils.redis.RedisUtils;
 import redis.clients.jedis.Jedis;
 
 public class Sub {
