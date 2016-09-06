@@ -14,11 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript">
 	
-	
-	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-
-
 
 </script>
 <!-- Google Fonts -->
@@ -146,12 +142,10 @@
 					<div class="register-top-grid">
 						<h3>PERSONAL INFORMATION</h3>
 						<div>
-							<span>宠物昵称<label>*</label></span> <input type="text"
-								name="userName">
+							<span>宠物昵称<label>*</label></span> <input type="text" name="userName">
 						</div>
 						<div>
-							<span>手机号<label>*</label></span> <input type="text"
-								name="userMobile">
+							<span>手机号<label>*</label></span> <input type="text" name="userMobile">
 						</div>
 						<div class="clearfix"></div>
 						<a class="news-letter" href="#"> </a>
@@ -159,12 +153,10 @@
 					<div class="register-bottom-grid">
 						<h3>LOGIN INFORMATION</h3>
 						<div>
-							<span>密码<label>*</label></span> <input type="password"
-								name="userPass1">
+							<span>密码<label>*</label></span> <input type="password" name="userPass1">
 						</div>
 						<div>
-							<span>确认密码<label>*</label></span> <input type="password"
-								name="userPass2">
+							<span>确认密码<label>*</label></span> <input type="password" name="userPass2">
 						</div>
 					</div>
 					<div class="register-but">
