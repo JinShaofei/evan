@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,7 +15,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript">
 	
+	
+	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+
 
 </script>
 <!-- Google Fonts -->
@@ -64,65 +69,7 @@
 </head>
 <body>
 	<!-- Header Part Starts Here -->
-	<div class="header">
-		<div class="container">
-			<div id="demo_top_wrapper">
-				<div id="sticky_navigation_wrapper">
-					<div id="sticky_navigation">
-						<div class="demo_container navigation-bar">
-							<div class="navigation">
-								<div class="logo">
-									<a href="index.htm">COLA</a>
-								</div>
-								<span class="menu"></span>
-								<script>
-									$("span.menu").click(
-											function() {
-												$(".navig").slideToggle("slow",
-														function() {
-															// Animation complete.
-														});
-											});
-								</script>
-								<div class="navig">
-									<ul>
-										<li><a href="toDog.htm">小狗</a></li>
-										<li><a href="toCat.htm">小猫</a></li>
-										<li><a href="toOthers.htm">其他</a></li>
-										<!-- <li><a href="#"></a></li> -->
-										<li><a href="about.htm">关于我们</a></li>
-									</ul>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="navigation-right">
-								<ul class="user">
-									<li><span></span><a href="toLogin.htm">登陆</a></li>
-									<li><span class="bascket"></span><a href="#">注册</a></li>
-									<li>
-										<button class="search"></button>
-									</li>
-								</ul>
-							</div>
-							<div class="clearfix"></div>
-							<div class="serch">
-								<span> <input type="text" placeholder="Search"
-									required=""> <input type="submit" value="" />
-								</span>
-							</div>
-							<script>
-								$("button.search").click(function() {
-									$(".serch").slideToggle("slow", function() {
-										// Animation complete.
-									});
-								});
-							</script>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<c:import url="../common/header.jsp"></c:import>
 	<div class="container">
 		<section id="main">
 		<div class="content">
@@ -142,10 +89,12 @@
 					<div class="register-top-grid">
 						<h3>PERSONAL INFORMATION</h3>
 						<div>
-							<span>宠物昵称<label>*</label></span> <input type="text" name="userName">
+							<span>宠物昵称<label>*</label></span> <input type="text"
+								name="userName">
 						</div>
 						<div>
-							<span>手机号<label>*</label></span> <input type="text" name="userMobile">
+							<span>手机号<label>*</label></span> <input type="text"
+								name="userMobile">
 						</div>
 						<div class="clearfix"></div>
 						<a class="news-letter" href="#"> </a>
@@ -153,10 +102,12 @@
 					<div class="register-bottom-grid">
 						<h3>LOGIN INFORMATION</h3>
 						<div>
-							<span>密码<label>*</label></span> <input type="password" name="userPass1">
+							<span>密码<label>*</label></span> <input type="password"
+								name="userPass1">
 						</div>
 						<div>
-							<span>确认密码<label>*</label></span> <input type="password" name="userPass2">
+							<span>确认密码<label>*</label></span> <input type="password"
+								name="userPass2">
 						</div>
 					</div>
 					<div class="register-but">
@@ -208,53 +159,11 @@
 			</div>
 			<!-- Partners Ends Here --->
 			<!-- Footer Menu Starts here --->
-			<div class="footer">
-				<div class="row footer-row">
-					<div class="col-md-3 footer-col">
-						<h3 class="ft-title">Collection</h3>
-						<ul class="ft-list">
-							<li><a href="#">Woman (1725)</a></li>
-							<li><a href="#">Men (635)</a></li>
-							<li><a href="#">Kids (2514</a></li>
-							<li><a href="#">Comming Soon (76)</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-col">
-						<h3 class="ft-title">site</h3>
-						<ul class="ft-list  list-h">
-							<li><a href="#">Terms of Service </a></li>
-							<li><a href="#">Privacy Policy </a></li>
-							<li><a href="#">Copyright Policy </a></li>
-							<li><a href="#">Press Kit</a></li>
-							<li><a href="#">Support</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-col">
-						<h3 class="ft-title">Shop</h3>
-						<ul class="ft-list list-h">
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Shipping Metods</a></li>
-							<li><a href="#">Career</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 foot-cl">
-						<h3 class="ft-title">social</h3>
-						<p>
-							Shoper is made with love in Warsaw,<br>2014 &copy; More
-							Templates <a href="http://www.mycodes.net/" target="_blank">&#28304;&#30721;&#20043;&#23478;</a>
-						</p>
-						<ul class="social">
-							<li><i class="fa"></i></li>
-							<li><i class="tw"></i></li>
-							<li><i class="is"></i></li>
-						</ul>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
+			<c:import url="../common/footer.jsp">
+			</c:import>
 			<!-- Footer Menu Ends here --->
 		</div>
 		</section>
+	</div>
 </body>
 </html>

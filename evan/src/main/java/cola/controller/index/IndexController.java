@@ -40,8 +40,13 @@ public class IndexController {
      * @return
      */
     @RequestMapping("/about.htm")
-    public String about() {
-        return "about/about";
+    public ModelAndView about(HttpServletRequest req) {
+        ModelAndView mv = new ModelAndView("about/about");
+        User u = (User) req.getSession().getAttribute("currentUser");
+        if (u != null) {
+            mv.addObject("u", u);
+        }
+        return mv;
     }
     
 }

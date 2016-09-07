@@ -14,13 +14,7 @@
 <!-- Custom Theme files -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript">
-	
-	
-	
 	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
-
-
-
 </script>
 <!-- Google Fonts -->
 <link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900'
@@ -70,73 +64,7 @@
 </head>
 <body>
 	<!-- Header Part Starts Here -->
-	<div class="header">
-		<div class="container">
-			<div id="demo_top_wrapper">
-				<div id="sticky_navigation_wrapper">
-					<div id="sticky_navigation">
-						<div class="demo_container navigation-bar">
-							<div class="navigation">
-								<div class="logo">
-									<a href="index.htm">COLA</a>
-								</div>
-								<span class="menu"></span>
-								<script>
-									$("span.menu").click(
-											function() {
-												$(".navig").slideToggle("slow",
-														function() {
-															// Animation complete.
-														});
-											});
-								</script>
-								<div class="navig">
-									<ul>
-										<li><a href="toDog.htm">小狗</a></li>
-										<li><a href="toCat.htm">小猫</a></li>
-										<li><a href="toOthers.htm">其他</a></li>
-										<!-- <li><a href="#"></a></li> -->
-										<li><a href="about.htm">关于我们</a></li>
-									</ul>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div class="navigation-right">
-								<ul class="user">
-									<c:if test="${u eq null }">
-										<li><span></span><a href="toLogin.htm">登录</a></li>
-									</c:if>
-									<c:if test="${u ne null }">
-										<li><span></span>你好：${u.userName}</li>
-										<li><span></span><a href="toLoginOut.htm">退出</a></li>
-									</c:if>
-									<li><span class="bascket"></span><a href="toRegister.htm">注册</a>
-									</li>
-									<li>
-										<button class="search"></button>
-									</li>
-								</ul>
-							</div>
-							<div class="clearfix"></div>
-							<div class="serch">
-								<span> <input type="text" placeholder="Search"
-									required=""> <input type="submit" value="" />
-								</span>
-							</div>
-							<script>
-								$("button.search").click(function() {
-									$(".serch").slideToggle("slow", function() {
-										// Animation complete.
-									});
-								});
-							</script>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<c:import url="../common/header.jsp"></c:import>
 	<div class="container">
 		<section id="main">
 		<div class="content">
@@ -294,44 +222,8 @@
 			</div>
 			<!-- Partners Ends Here --->
 			<!-- Footer Menu Starts here --->
-			<div class="footer">
-				<div class="row footer-row">
-					<div class="col-md-3 footer-col">
-						<h3 class="ft-title">宠物部落</h3>
-						<ul class="ft-list">
-							<li><a href="#">小狗</a></li>
-							<li><a href="#">小猫</a></li>
-							<li><a href="#">其他</a></li>
-							<li><a href="#">敬请期待</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-col">
-						<h3 class="ft-title">帮助中心</h3>
-						<ul class="ft-list  list-h">
-							<li><a href="#">账户管理</a></li>
-							<li><a href="#">注册指南 </a></li>
-							<li><a href="#">宠物乐园</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 footer-col">
-						<h3 class="ft-title">关于我们</h3>
-						<ul class="ft-list list-h">
-							<li><a href="#">了解我们</a></li>
-							<li><a href="#">加入我们</a></li>
-							<li><a href="#">联系我们</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 foot-cl">
-						<h3 class="ft-title">关注我们</h3>
-						<ul class="ft-list list-h">
-							<li><a href="#">新浪微博</a></li>
-							<li><a href="#">宠物部落</a></li>
-							<li><a href="#">官方微信</a></li>
-						</ul>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
+			<c:import url="../common/footer.jsp">
+			</c:import>
 			<!-- Footer Menu Ends here --->
 		</div>
 		</section>
