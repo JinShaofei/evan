@@ -97,7 +97,6 @@ public class UsersController {
             req.getSession().removeAttribute("currentUser");
         }
         return "user/login";
-
     }
 
 }

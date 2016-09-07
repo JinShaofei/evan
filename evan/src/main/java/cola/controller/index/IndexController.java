@@ -41,9 +41,7 @@ public class IndexController {
      */
     @RequestMapping("/about.htm")
     public String about() {
-
         return "about/about";
-
     }
     
 }

@@ -41,6 +41,4 @@ public class LogicController {
     public String toOthers() {
         return "logic/others";
     }
-
-
 }
