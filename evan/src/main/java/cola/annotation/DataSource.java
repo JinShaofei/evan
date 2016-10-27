@@ -9,6 +9,7 @@ import java.lang.annotation.Target;
  * 自定义注解(主从数据库)
  * 
  * @author shaofeijin
+ * just ttt
  *
  */
 @Retention(RetentionPolicy.RUNTIME)
