@@ -1264,7 +1264,7 @@ public class RedisUtils {
         } finally {
             returnResource(jedis);
         }
-        return new HashSet<>();
+        return new HashSet();
     }
 
     public static List<String> hvals(final String value) {
@@ -1281,7 +1281,7 @@ public class RedisUtils {
         } finally {
             returnResource(jedis);
         }
-        return new ArrayList<>();
+        return new ArrayList();
     }
     /**
      * 0.0 Description:返还到连接池
