@@ -15,6 +15,7 @@ import cola.entity.User;
  *
  */
 @Controller
+@RequestMapping("/index")
 public class IndexController {
 
     /**
@@ -22,9 +23,9 @@ public class IndexController {
      * 
      * @return
      */
-    @RequestMapping("/index.htm")
+    @RequestMapping("index.htm")
     public ModelAndView index(HttpServletRequest req) {
-        ModelAndView mv = new ModelAndView("index/index");
+        ModelAndView mv = new ModelAndView("index");
         User u = (User) req.getSession().getAttribute("currentUser");
         if (u != null) {
             mv.addObject("u", u);
