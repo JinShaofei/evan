@@ -15,7 +15,6 @@ import cola.entity.User;
  *
  */
 @Controller
-@RequestMapping("/index")
 public class IndexController {
 
     /**

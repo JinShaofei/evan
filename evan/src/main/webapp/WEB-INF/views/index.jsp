@@ -7,17 +7,17 @@
 		<script type="application/x-javascript"> addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<!meta charset utf="8">
 		<!--bootstrap-->
-		<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 		<!--coustom css-->
-		<link href="/css/style.css" rel="stylesheet" type="text/css"/>
-		<link href="/css/owl.carousel.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="css/owl.carousel.css" rel="stylesheet">
 		<link rel="stylesheet" href="/css/chocolat.css" type="text/css" media="screen" charset="utf-8" />
 		<!--script-->
-		<script src="/js/jquery-2.1.4.min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
-		<script src="/js/owl.carousel.js"></script>
-		<script type="text/javascript" src="/js/move-top.js"></script>
-		<script type="text/javascript" src="/js/easing.js"></script>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/owl.carousel.js"></script>
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<script type="text/javascript" src="js/easing.js"></script>
 		<!--fonts-->
 		<link href='http://fonts.useso.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.useso.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
